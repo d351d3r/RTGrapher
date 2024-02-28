@@ -1,0 +1,18 @@
+{
+    "sourceFile": "README.MD",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1708168824797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1708168824797,
+            "name": "Commit-0",
+            "content": "# RealTimeGrapher\n\nThis project is a Qt6 application that provides real-time data graphing.\n\n## Getting Started\n\nThese instructions will get you a copy of the project up and running on your local machine for development and testing purposes.\n\n### Prerequisites\n\nWhat things you need to install the software and how to install them:\n\n- Qt6\n- CMake 3.14 or higher\n\n### Building\n\nTo build the project, run the following commands:\n\n```bash\nmkdir build && cd build\ncmake ..\nmake\n"
+        }
+    ]
+}

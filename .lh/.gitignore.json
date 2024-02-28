@@ -1,0 +1,22 @@
+{
+    "sourceFile": ".gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1708168890444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1708179894435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,5 +70,5 @@\n # Binaries\n # --------\n *.dll\n *.exe\n-\n+./build\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1708168890444,
+            "name": "Commit-0",
+            "content": "# This file is used to ignore files which are generated\n# ----------------------------------------------------------------------------\n\n*~\n*.autosave\n*.a\n*.core\n*.moc\n*.o\n*.obj\n*.orig\n*.rej\n*.so\n*.so.*\n*_pch.h.cpp\n*_resource.rc\n*.qm\n.#*\n*.*#\ncore\n!core/\ntags\n.DS_Store\n.directory\n*.debug\nMakefile*\n*.prl\n*.app\nmoc_*.cpp\nui_*.h\nqrc_*.cpp\nThumbs.db\n*.res\n*.rc\n/.qmake.cache\n/.qmake.stash\n\n# qtcreator generated files\n*.pro.user*\nCMakeLists.txt.user*\n\n# xemacs temporary files\n*.flc\n\n# Vim temporary files\n.*.swp\n\n# Visual Studio generated files\n*.ib_pdb_index\n*.idb\n*.ilk\n*.pdb\n*.sln\n*.suo\n*.vcproj\n*vcproj.*.*.user\n*.ncb\n*.sdf\n*.opensdf\n*.vcxproj\n*vcxproj.*\n\n# MinGW generated files\n*.Debug\n*.Release\n\n# Python byte code\n*.pyc\n\n# Binaries\n# --------\n*.dll\n*.exe\n\n"
+        }
+    ]
+}
