@@ -1,38 +1,35 @@
 #include "MainWindow.hpp"
-
-#include <QVBoxLayout>
+#include "ui_MainWindow.h"
 
 MainWindow::MainWindow(QWidget* parent)
-    : QMainWindow(parent), dataGenerator(new DataGenerator(this)) {
-  auto centralWidget = new QWidget(this);
-  setCentralWidget(centralWidget);
+    : QMainWindow(parent), ui(new Ui::MainWindow) {
+  ui->setupUi(this);
+  dataGenerator = new DataGenerator(this);
 
-  auto layout = new QVBoxLayout(centralWidget);
-
-  graphWidget = new GraphWidget();
-  graphWidget->setMinimumSize(640, 480);
-  controlPanel = new ControlPanel();
-  resultWidget = new ResultWidget();
-
-  layout->addWidget(graphWidget);
-  layout->addWidget(controlPanel);
-  layout->addWidget(resultWidget);
-
-  connect(controlPanel, &ControlPanel::startPressed, this,
+  // Подключаем сигналы от кнопок к слотам
+  connect(ui->startButton, &QPushButton::clicked, this,
           &MainWindow::onStartButtonClicked);
-  connect(controlPanel, &ControlPanel::stopPressed, this,
+  connect(ui->stopButton, &QPushButton::clicked, this,
           &MainWindow::onStopButtonClicked);
-  connect(controlPanel, &ControlPanel::clearPressed, this,
+  connect(ui->resetButton, &QPushButton::clicked, this,
           &MainWindow::onResetButtonClicked);
-  connect(dataGenerator, &DataGenerator::newDataPoint, graphWidget,
-          &GraphWidget::addPoint);
+
+  // Подключение генератора данных к виджету графика
+  // Убедитесь, что у вас правильно настроены имена объектов в файле .ui
+  connect(dataGenerator, &DataGenerator::newDataPoint, ui->graphWidget,
+          &GraphWidget::addPoint);  // Исправьте GraphWidget на graphWidget
+}
+
+MainWindow::~MainWindow() {
+  delete ui;  // Освобождаем ресурсы, выделенные для UI
+  delete dataGenerator;  // Освобождаем ресурсы, выделенные для dataGenerator
 }
 
 void MainWindow::onStartButtonClicked() {
   qDebug() << "Start button was clicked";
   dataGenerator->startGenerator();
-  ui->startButton->setEnabled(false);  // Деактивируем кнопку "Start"
-  ui->stopButton->setEnabled(true);  // Активируем кнопку "Stop"
+  ui->startButton->setEnabled(false);
+  ui->stopButton->setEnabled(true);
   ui->resetButton->setEnabled(
       false);  // Деактивируем кнопку "Reset" до остановки генерации
 }
@@ -40,25 +37,19 @@ void MainWindow::onStartButtonClicked() {
 void MainWindow::onStopButtonClicked() {
   qDebug() << "Stop button was clicked";
   dataGenerator->stopGenerator();
-  ui->startButton->setEnabled(
-      true);  // Возвращаем кнопку "Start" в активное состояние
-  ui->stopButton->setEnabled(false);  // Деактивируем кнопку "Stop"
+  ui->startButton->setEnabled(true);  // Активируем кнопку "Start" обратно
+  ui->stopButton->setEnabled(false);
   ui->resetButton->setEnabled(
       true);  // Активируем кнопку "Reset", так как генерация остановлена
 }
 
 void MainWindow::onResetButtonClicked() {
   qDebug() << "Reset button was clicked";
-  // Остановка генератора, если это еще не было сделано
-  if (dataGenerator->isRunning()) {
-    dataGenerator->stopGenerator();
-  }
-  ui->graphWidget->clearData();  // Очищаем данные графика
-  ui->resultWidget->clear();  // Очищаем список результатов
-  // Состояние кнопок после сброса данных
+  dataGenerator
+      ->stopGenerator();  // Остановка генерации данных, если она активна
+  ui->graphWidget->clearData();  // Очистка данных графика
+  ui->resultsListWidget->clear();  // Очистка списка результатов
   ui->startButton->setEnabled(true);
-  ui->stopButton->setEnabled(
-      false);  // Убедимся, что кнопка "Stop" деактивирована
-  ui->resetButton->setEnabled(
-      false);  // Деактивируем кнопку "Reset", так как уже нет данных для сброса
+  ui->stopButton->setEnabled(false);
+  ui->resetButton->setEnabled(false);
 }

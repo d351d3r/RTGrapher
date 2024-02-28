@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1708855162430,
@@ -16,6 +16,14 @@
                 {
                     "date": 1709144659603,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   </property>\n   <widget class=\"QWidget\" name=\"centralWidget\">\n    <layout class=\"QVBoxLayout\" name=\"verticalLayout\">\n     <item>\n-     <widget class=\"QWidget\" name=\"placeholderForGraphWidget\" native=\"true\"/>\n+     <widget class=\"GraphWidget\" name=\"placeholderForGraphWidget\" native=\"true\"/>\n     </item>\n     <item>\n      <layout class=\"QHBoxLayout\" name=\"controlButtonsLayout\">\n       <item>\n@@ -47,10 +47,27 @@\n      <widget class=\"QListWidget\" name=\"resultsListWidget\"/>\n     </item>\n    </layout>\n   </widget>\n-  <widget class=\"QMenuBar\" name=\"menuBar\"/>\n+  <widget class=\"QMenuBar\" name=\"menuBar\">\n+   <property name=\"geometry\">\n+    <rect>\n+     <x>0</x>\n+     <y>0</y>\n+     <width>800</width>\n+     <height>37</height>\n+    </rect>\n+   </property>\n+  </widget>\n   <widget class=\"QStatusBar\" name=\"statusBar\"/>\n  </widget>\n+ <customwidgets>\n+  <customwidget>\n+   <class>GraphWidget</class>\n+   <extends>QWidget</extends>\n+   <header location=\"global\">GraphWidget.hpp</header>\n+   <container>1</container>\n+  </customwidget>\n+ </customwidgets>\n  <resources/>\n  <connections/>\n-</ui>\n+</ui>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1709156885338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   </property>\n   <widget class=\"QWidget\" name=\"centralWidget\">\n    <layout class=\"QVBoxLayout\" name=\"verticalLayout\">\n     <item>\n-     <widget class=\"GraphWidget\" name=\"placeholderForGraphWidget\" native=\"true\"/>\n+     <widget class=\"GraphWidget\" name=\"GraphWidget\" native=\"true\"/>\n     </item>\n     <item>\n      <layout class=\"QHBoxLayout\" name=\"controlButtonsLayout\">\n       <item>\n"
+                },
+                {
+                    "date": 1709157065250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   </property>\n   <widget class=\"QWidget\" name=\"centralWidget\">\n    <layout class=\"QVBoxLayout\" name=\"verticalLayout\">\n     <item>\n-     <widget class=\"GraphWidget\" name=\"GraphWidget\" native=\"true\"/>\n+     <widget class=\"GraphWidget\" name=\"graphWidget\" native=\"true\"/>\n     </item>\n     <item>\n      <layout class=\"QHBoxLayout\" name=\"controlButtonsLayout\">\n       <item>\n"
                 }
             ],
             "date": 1708855162430,

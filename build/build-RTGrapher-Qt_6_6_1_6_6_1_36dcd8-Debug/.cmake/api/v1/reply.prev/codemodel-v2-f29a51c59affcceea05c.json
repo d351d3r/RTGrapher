@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "RTGrapher",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "RTGrapher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTGrapher-Debug-6bc63cbce2062fca517f.json",
+					"name" : "RTGrapher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RTGrapher_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTGrapher_autogen-Debug-e4a2e6d83a7ec9729798.json",
+					"name" : "RTGrapher_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RTGrapher_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTGrapher_autogen_timestamp_deps-Debug-83bc05a8f18392a94a74.json",
+					"name" : "RTGrapher_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/anatoliicherednichenko/RTGrapher/RTGrapher/build/build-RTGrapher-Qt_6_6_1_6_6_1_36dcd8-Debug",
+		"source" : "/Users/anatoliicherednichenko/RTGrapher/RTGrapher"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

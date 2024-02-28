@@ -21,6 +21,7 @@ include_directories(
     src/views/header
     src/resources
 )
+set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/src/resources)
 
 # Source files
 set(SOURCES

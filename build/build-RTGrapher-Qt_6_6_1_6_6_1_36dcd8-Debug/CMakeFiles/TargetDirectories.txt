@@ -1,0 +1,5 @@
+/Users/anatoliicherednichenko/RTGrapher/RTGrapher/build/build-RTGrapher-Qt_6_6_1_6_6_1_36dcd8-Debug/CMakeFiles/RTGrapher.dir
+/Users/anatoliicherednichenko/RTGrapher/RTGrapher/build/build-RTGrapher-Qt_6_6_1_6_6_1_36dcd8-Debug/CMakeFiles/edit_cache.dir
+/Users/anatoliicherednichenko/RTGrapher/RTGrapher/build/build-RTGrapher-Qt_6_6_1_6_6_1_36dcd8-Debug/CMakeFiles/rebuild_cache.dir
+/Users/anatoliicherednichenko/RTGrapher/RTGrapher/build/build-RTGrapher-Qt_6_6_1_6_6_1_36dcd8-Debug/CMakeFiles/RTGrapher_autogen_timestamp_deps.dir
+/Users/anatoliicherednichenko/RTGrapher/RTGrapher/build/build-RTGrapher-Qt_6_6_1_6_6_1_36dcd8-Debug/CMakeFiles/RTGrapher_autogen.dir

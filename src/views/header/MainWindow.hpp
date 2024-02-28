@@ -3,13 +3,20 @@
 
 #include <QMainWindow>
 #include "DataGenerator.hpp"
-#include "ui_MainWindow.h"  // Добавляем сгенерированный заголовочный файл
+#include "ui_MainWindow.h"  // Убедитесь, что название совпадает с сгенерированным файлом
+
+QT_BEGIN_NAMESPACE
+namespace Ui {
+class MainWindow;
+}
+QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow {
   Q_OBJECT
 
  public:
   explicit MainWindow(QWidget* parent = nullptr);
+  ~MainWindow();  // Добавляем деструктор
 
  private slots:
   void onStartButtonClicked();
@@ -17,8 +24,8 @@ class MainWindow : public QMainWindow {
   void onResetButtonClicked();
 
  private:
-  Ui::MainWindow* ui;  // Указатель на сгенерированный класс UI
-  DataGenerator* dataGenerator;  // Указатель на класс генератора данных
+  Ui::MainWindow* ui;
+  DataGenerator* dataGenerator;
 };
 
 #endif  // MAINWINDOW_HPP
