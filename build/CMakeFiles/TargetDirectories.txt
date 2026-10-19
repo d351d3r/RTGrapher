@@ -1,0 +1,5 @@
+/Users/anatoliicherednichenko/RTGrapher/RTGrapher/build/CMakeFiles/RTGrapher.dir
+/Users/anatoliicherednichenko/RTGrapher/RTGrapher/build/CMakeFiles/edit_cache.dir
+/Users/anatoliicherednichenko/RTGrapher/RTGrapher/build/CMakeFiles/rebuild_cache.dir
+/Users/anatoliicherednichenko/RTGrapher/RTGrapher/build/CMakeFiles/RTGrapher_autogen_timestamp_deps.dir
+/Users/anatoliicherednichenko/RTGrapher/RTGrapher/build/CMakeFiles/RTGrapher_autogen.dir
