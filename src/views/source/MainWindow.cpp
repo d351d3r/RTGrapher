@@ -16,8 +16,8 @@ MainWindow::MainWindow(QWidget* parent)
 
   // Подключение генератора данных к виджету графика
   // Убедитесь, что у вас правильно настроены имена объектов в файле .ui
-  connect(dataGenerator, &DataGenerator::newDataPoint, ui->graphWidget,
-          &GraphWidget::addPoint);  // Исправьте GraphWidget на graphWidget
+  connect(dataGenerator, &DataGenerator::newDataPoint, ui->graphWidget, &GraphWidget::addPoint);
+
 }
 
 MainWindow::~MainWindow() {
